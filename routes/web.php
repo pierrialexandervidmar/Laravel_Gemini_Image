@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GeminiImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GeminiImageController::class, 'create'])->name('gemini-image.create');
+Route::post('/gemini-image', [GeminiImageController::class, 'store'])->name('gemini-image.store');

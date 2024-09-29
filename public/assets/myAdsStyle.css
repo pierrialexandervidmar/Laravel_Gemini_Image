@@ -1,0 +1,140 @@
+:root {
+  --footerHeight: 92px;
+}
+.my-advertise-page {
+  width: 100%;
+  min-height: calc(100vh - var(--footerHeight));
+  display: flex;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 184px;
+  border-right: 1.5px solid #e7e9ed;
+  padding-top: 50px;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #96a3ab;
+}
+.sidebar img {
+  margin-right: 8px;
+}
+.sidebar-top .config-myadvertise {
+  color: #96a3ab;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 56px;
+}
+.sidebar-top .myadvertise-button {
+  color: #5c7bfa;
+}
+.myadvertise-area {
+  padding-top: 50px;
+  margin-left: 50px;
+  width: 100%;
+}
+.myadvertise-title {
+  color: #3c4952;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.myadvertise-advertise-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.my-ad-item {
+  border: 1.5px solid #e7e9ed;
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+.ad-image-area .ad-image {
+  width: 100%;
+  aspect-ratio: 147/100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 16px;
+}
+.ad-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  z-index: 10;
+  position: relative;
+  padding-right: 16px;
+  margin-bottom: -54px;
+}
+.ad-button {
+  height: 38px;
+  width: 38px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8px;
+}
+@media (max-width: 1024px) {
+  .myadvertise-advertise-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:768px){
+  .my-advertise-page {
+    flex-direction: column;
+  }
+  .myadvertise-area{
+    margin: 0;
+  }
+  .sidebar {
+    flex-direction: row;
+    border: 0;
+    width: 100%;
+    border-bottom: 1.5px solid #e7e9ed;
+    padding: 32px 20px;
+  }
+  .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .sidebar-top .config-myadvertise {
+    margin: 0;
+  }
+  footer{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 640px) {
+  
+  .myadvertise-area {
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .myadvertise-title {
+    display: none;
+  }
+  .myadvertise-advertise-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    width: 90%;
+    max-width: 350px;
+  }
+  .my-ad-item{
+    margin-bottom: 20px;
+  }
+}
